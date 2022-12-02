@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS betcamp_db;
+
+CREATE DATABASE betcamp_db;
