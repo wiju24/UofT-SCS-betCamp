@@ -1,0 +1,24 @@
+nav{
+    display: flexbox;
+    height: 6rem;
+ margin: 0rem;
+    background-color: #3F634E;
+    text-align: center;
+    
+    color: #fff;
+}
+
+body{
+    background-color: #3A3A38;
+}
+div{
+    position: absolute center;
+    background-color:rgba(255, 255, 255, 0.404);
+    height: 18rem;
+    width: 18rem;
+    margin-left: 40%;
+    display: flexbox;
+    position: absolute;
+    margin-top: -30rem;
+    text-align: center;
+}
