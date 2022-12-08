@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <Hi-Lo></Hi-Lo>
+    </title>
+    <link rel="stylesheet" href="blackjack.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./public/css/hi-low.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="#Game">Game</a>
+        <a href="#news">
+            <select id="select">
+                <option value="volvo">Casino</option>
+                <option value="Casino1">Casino 1</option>
+                <option value="Casino2">Casino 2</option>
+                <option value="Casino3">Casino 3</option>
+            </select>
+        </a>
+    </div>
+    <nav class="header">
+        <h3 id="headerText">UofT SCS betcamp</h3>
+        <button type="button" id="btn">Dark/Light Theme</button>
+    </nav>
+
+    <div class="w3-sidebar w3-light-grey w3-bar-block" id="sideNav">
+        <h3 class="w3-bar-item">Live game (Marquee)</h3>
+
+        <h3 style="margin-top: 30px;" class="w3-bar-item">My Bet</h3>
+        <a style="margin-top:40px;" href="#" class="w3-bar-item w3-button">Team:</a>
+        <a style="margin-top:20px;" href="#" class="w3-bar-item w3-button">Bet:</a>
+
+    </div>
+
+    <div id="tiledBackground" font-family:arial; margin-left: 18%>
+        <!-- <img src="./Asset/bg.png" alt="poker suit background image"/> -->
+        <main>
+            <div class="hilo-grid">
+                <div class="grid-container">
+                    <div class="grid-item grid-1">
+                        <h2>Welcome to the Hi-Lo Game!</h2>
+                        <h3>A card is dealt from a deck of cards and you have to predit if the next card will be higher
+                            or lower.</h3>
+                        <h3>Each bet is $10</h3>
+                        <button id="bet">Bet</button>
+                        <h2 id="result">Good Luck!(Result)</h2>
+                    </div>
+                    <div class="grid-item grid-2">
+                        <img src="./Asset/BACK.png" id="card1" alt="poker card back" />
+
+                    </div>
+
+                    <div class="grid-item grid-3">
+                        <img src="./Asset/BACK.png" id="card2" alt="poker card back" />
+                    </div>
+                    <div class="grid-item grid-4"></div>
+                    <div class="grid-item grid-5">
+                        <div class="radio-toolbar">
+                            <input type="radio" id="radioHi" name="radio-hi-lo" value="higher">
+                            <label for="radioHi">Higher</label>
+                            <input type="radio" id="radioLo" name="radio-hi-lo" value="lower">
+                            <label for="radioLo">Lower</label>
+                        </div>
+                        <!-- <button id="lower">Lower</button>  -->
+                        <br>
+                        <button id="playHiLo">Play</button>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="./public/js/hi-low.js"></script>
+</body>
+
+</html>
