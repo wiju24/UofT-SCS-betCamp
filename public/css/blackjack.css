@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff
+}
+
+#headerText {
+    background: linear-gradient(to right, hsl(0, 1%, 74%) 0, hsl(0, 0%, 100%) 10%, hsl(60, 1%, 50%) 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 5s infinite linear;
+    font-family: 'Graduate', cursive;
+    font-style: oblique;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0;
+    }
+
+    60% {
+        background-position: 1000px;
+    }
+
+    100% {
+        background-position: 1200px;
+    }
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #313232;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#select {
+    background-color: #313232;
+    border: none;
+    color: white;
+    font-size: medium;
+    margin-left: 50px;
+    color: yellow;
+}
+
+.header {
+    overflow: hidden;
+    background-color: #2F6C53;
+    height: 50px;
+    vertical-align: middle;
+}
+
+#sideNav {
+    width: 18%;
+    background-color: #373837 !important;
+    color: white !important;
+    position: absolute !important;
+}
+
+nav {
+    display: flexbox;
+    height: 6rem;
+    margin: 0rem;
+    background-color: #3F634E;
+    text-align: center;
+    color: #fff;
+}
+
+#tiledBackground {
+    text-align: center;
+}
+
+
+#tiledBackground {
+    text-align: center;
+}
+
+#btn {
+    float: right;
+    z-index: 0;
+    background-color: #2F6C53;
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 5px;
+    height: 48px;
+    color: white;
+    cursor: pointer;
+    margin-top: -50px;
+}
+
+#dealer-cards img,
+#your-cards img {
+    height: 270px;
+    width: 200px;
+    margin: 5px;
+}
+
+
+#hit,
+#stay,
+#bet {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    background-color: #3F634E;
+    border-radius: 10px;
+    text-transform: uppercase;
+    Letter-spacing: 2px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    margin: 10px;
+}
+
+#hit:hover,
+#stay:hover,
+#bet:hover {
+    background: rgba(250, 238, 2, 0.6);
+    box-shadow: 0 0 5px #024b24, 0 0 10px rgba(250, 238, 2, 0.5);
+}
+
+#hit:hover,
+#stay:hover,
+#bet:hover {
+    transform: translateY(2px);
+}
+
+@media screen and (max-width: 818px) {
+
+    #dealer-cards img,
+    #your-cards img {
+        height: 170px;
+        width: 130px;
+        margin: 2px;
+    }
+}
