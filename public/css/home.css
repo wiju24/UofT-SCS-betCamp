@@ -1,0 +1,33 @@
+.nav1{
+    background-color: black;
+  margin-top: 0rem;
+  margin-top: 0%;
+    display: flex;
+    color: aliceblue;
+    text-decoration: none;
+    height: 4rem;
+    width: 100%;
+    text-align: center;
+
+}
+a:hover> .change{
+    text-decoration-color: yellow;
+
+}
+.nav2{
+    background-color: #3F634E;
+    margin-top: 0rem;
+    margin-top: 0%;
+      display: flex;
+      color: aliceblue;
+      text-decoration: none;
+      height: 4rem;
+      width: 100%;
+      text-align: center;
+}
+body{
+    background: grey;
+}
+hr{
+    background-color: lightcyan;
+}
