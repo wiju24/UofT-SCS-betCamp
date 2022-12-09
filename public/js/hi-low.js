@@ -14,59 +14,65 @@ function buildDeck() {
             deck.push(values[j] + "-" + types[i]); //A-C -> K-C, A-D -> K-D
         }
     }
-    let cardArr = deck;
-    console.log(cardArr);    
+    console.log(deck);
 }
 
 function shuffleDeck() {
     for (let i = 0; i < deck.length; i++) {
-        let j = Math.floor(Math.random() * deck.length); // (0-1) * 52 
+        let j = Math.floor(Math.random() * deck.length); // (0-1) * 52 => (0-51.9999)
         let temp = deck[i];
         deck[i] = deck[j];
         deck[j] = temp;
     }
-    console.log(deck[0]); 
-    let currentCard = document.getElementById("card1");
-    currentCard.src = "./Asset/cards/cards/" + deck[0] + ".png"; 
-}; 
+    console.log(deck);
+    console.log(deck[0]);
+    return(deck[0]);
+}
 
-document.getElementById("bet").addEventListener("click", shuffleDeck());        
+let currentCard = document.getElementById("card1");
+document.getElementById("bet").onclick = function() {
+    let card1 = deck.pop();
+    console.log(card1);
+    currentCard.src = "./Asset/cards/cards/" + card1 + ".png";
+    playCard.src = "Asset/BACK.png";
+}
+
+
+
+let playCard = document.getElementById("card2");
+document.getElementById("playHiLo").onclick = function() {
+    let card2 = deck.pop();
+    console.log(card2);
+    playCard.src = "./Asset/cards/cards/" + card2 + ".png"
+}
+
+// guess logic
+function guessCard(highLowGuess, newCard){
+    let correctGuess;
     
-// document.getElementById("bet").addEventListener("click", bet());
-//     function bet() {
-//         let card = deck[0];
-//         document.getElementById("card1").src = "./Asset/cards/cards/" + card + ".png";
-//     }
-    
-
-
-function startGame() {
-        let cardImg = document.createElement("img");
-        let card = deck[0];
-        cardImg.src = "./Asset/cards/cards/" + card + ".png";
-        document.getElementById("card1").src = "./Asset/cards/cards/" + ".png";
+    if(highLowGuess === "Higher"){        
+        if(newCard > previousCard){
+            correctGuess = true;
+        }
+        else {
+            correctGuess = false;
+        }
     }
-
-
-// let random1 = shuffleDeck().value;
-// console.log(random1);
-
-// function showCurrent(){
-//     currentCard = deck.pop();
-//     let cardImg = document.createElement("img");
-//     let card = deck.pop();
-//     cardImg.src = "./card/" + card + ".png";
-//     document.getElementById("card1").append(cardImg);
-//     console.log(card);
-// }
-
-// document.getElementById("bet").addEventListener("click", function(showCurrent) {
-//     let cardImg = document.createElement("img");
-//     let card = random1;
-//     cardImg.src = "./card/" + card + ".png";
-
-//   });
-
+    else if(highLowGuess === "Lower"){
+        if(newCard < previousCard){
+            correctGuess = true;
+        }
+        else {
+            correctGuess = false;
+        }
+    }
+    else {
+        console.log("No guess provided");
+        correctGuess = false;
+    }
+    
+    return correctGuess;
+}
 
 // guess logic
 // function guessCard(highLowGuess, newCard){
