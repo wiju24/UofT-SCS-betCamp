@@ -12,13 +12,16 @@ if (email && password) {
   });
 
   if (response.ok) {
-      document.location.replace('/main');
+      document.location.replace('/home');
       
   } else {
       alert('An error occurred');
   }
+
 }
 };
+
+
 
 const SignUp  = async (event) => {
   event.preventDefault();
@@ -35,12 +38,12 @@ const SignUp  = async (event) => {
       });
 
       if (response.ok) {
-          document.location.replace('/main');
+          document.location.replace('/home');
       } else {
           alert('An error occurred');
       }
   }
 };
 
-document.querySelector('.login-form').addEventListener('submit', loginForm);
-document.querySelector('.signup-form').addEventListener('submit', SignUp);
+document.querySelector('#login-form').addEventListener('onclick', loginForm);
+document.querySelector('#signup-form').addEventListener('onclick', SignUp);
