@@ -15,10 +15,6 @@ User.init(
             type: Datatypes.STRING,
             allowNull: false,
         },
-        username: {
-            type: Datatypes.STRING,
-            allowNull: false,
-        },
         email: {
             type: Datatypes.STRING,
             allowNull: false,
@@ -47,4 +43,4 @@ User.init(
         modelName: 'betcamp',
     }
 );
-module.exports =  User;
+module.exports = User;
