@@ -1,0 +1,33 @@
+[
+
+    {
+        "name": "Vij",
+        "email": "vijithiran_navajeevayokan@hotmail.com",
+        "password": "password123",
+        "balance": 0.50
+    },
+    {
+        "name": "Derrick",
+        "email": "derrick@hotmail.com",
+        "password": "password1234",
+        "balance": 0.50
+    },
+    {
+        "name": "Heidi",
+        "email": "heidi@hotmail.com",
+        "password": "password12345",
+        "balance": 0.50
+    },
+    {
+        "name": "Mayank",
+        "email": "mayank@hotmail.com",
+        "password": "password123456",
+        "balance": 0.50
+    },
+    {
+        "name": "Abdallah",
+        "email": "abdallah@hotmail.com",
+        "password": "password1234567",
+        "balance": 0.50
+    }
+]
