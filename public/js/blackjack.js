@@ -143,8 +143,14 @@ function reduceAce(playerSum, playerAceCount) {
     return playerSum;
 }
 
+<<<<<<< Updated upstream
     document.getElementById("replay").addEventListener("click",  function() {
         location.reload()
     })
 
 
+=======
+document.getElementById("replay").addEventListener("click",  function() {
+    location.reload()
+})
+>>>>>>> Stashed changes
