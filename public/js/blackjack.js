@@ -1,16 +1,14 @@
 
-var dealerSum = 0;
-var yourSum = 0;
+let dealerSum = 0;
+let yourSum = 0;
 
-var dealerAceCount = 0;
-var yourAceCount = 0; 
+let dealerAceCount = 0;
+let yourAceCount = 0; 
 
-var hidden;
-var deck;
+let hidden;
+let deck;
 
-let betEl=document.getElementById("bet")
-
-var canHit = true; //allows the player (you) to draw while yourSum <= 21
+let canHit = true; //allows the player (you) to draw while yourSum <= 21
 
 window.onload = function() {
     buildDeck();
@@ -41,7 +39,6 @@ function shuffleDeck() {
     console.log(deck);
 }
 
-
 function startGame() {
     hidden = deck.pop();
     dealerSum += getValue(hidden);
@@ -51,7 +48,7 @@ function startGame() {
     while (dealerSum < 17) {
         let cardImg = document.createElement("img");
         let card = deck.pop();
-        cardImg.src = "./Asset/cards/cards/" + card + ".png";
+        cardImg.src = "../Asset/cards/cards/" + card + ".png";
         dealerSum += getValue(card);
         dealerAceCount += checkAce(card);
         document.getElementById("dealer-cards").append(cardImg);
@@ -61,7 +58,7 @@ function startGame() {
     for (let i = 0; i < 2; i++) {
         let cardImg = document.createElement("img");
         let card = deck.pop();
-        cardImg.src = "./Asset/cards/cards/" + card + ".png";
+        cardImg.src = "../Asset/cards/cards/" + card + ".png";
         yourSum += getValue(card);
         yourAceCount += checkAce(card);
         document.getElementById("your-cards").append(cardImg);
@@ -76,10 +73,9 @@ function hit() {
     if (!canHit) {
         return;
     }
-
     let cardImg = document.createElement("img");
     let card = deck.pop();
-    cardImg.src = "./Asset/cards/cards/" + card + ".png";
+    cardImg.src = "../Asset/cards/cards/" + card + ".png";
     yourSum += getValue(card);
     yourAceCount += checkAce(card);
     document.getElementById("your-cards").append(cardImg);
@@ -94,7 +90,7 @@ function stay() {
     yourSum = reduceAce(yourSum, yourAceCount);
 
     canHit = false;
-    document.getElementById("hidden").src = "./Asset/cards/cards/" + hidden + ".png";
+    document.getElementById("hidden").src = "../Asset/cards/cards/" + hidden + ".png";
 
     let message = "";
     if (yourSum > 21) {
@@ -146,3 +142,9 @@ function reduceAce(playerSum, playerAceCount) {
     }
     return playerSum;
 }
+
+    document.getElementById("replay").addEventListener("click",  function() {
+        location.reload()
+    })
+
+

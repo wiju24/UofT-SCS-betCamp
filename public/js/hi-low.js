@@ -30,28 +30,27 @@ function shuffleDeck() {
 }
 
 let currentCard = document.getElementById("card1");
-document.getElementById("bet").onclick = function() {
+document.getElementById("replay").onclick = function() {
     let card1 = deck.pop();
     console.log(card1);
-    currentCard.src = "./Asset/cards/cards/" + card1 + ".png";
-    playCard.src = "Asset/BACK.png";
+    currentCard.src = "/Asset/cards/cards/" + card1 + ".png";
+    playCard.src = "/Asset/BACK.png";
 }
-
-
 
 let playCard = document.getElementById("card2");
 document.getElementById("playHiLo").onclick = function() {
     let card2 = deck.pop();
     console.log(card2);
-    playCard.src = "./Asset/cards/cards/" + card2 + ".png"
+    playCard.src = "/Asset/cards/cards/" + card2 + ".png"
 }
 
 // guess logic
-function guessCard(highLowGuess, newCard){
+function guessCard(highLowGuess, playCard){
+    let result = document.getElementById("result");
     let correctGuess;
     
     if(highLowGuess === "Higher"){        
-        if(newCard > previousCard){
+        if(playCard > currentCard){
             correctGuess = true;
         }
         else {
@@ -59,7 +58,7 @@ function guessCard(highLowGuess, newCard){
         }
     }
     else if(highLowGuess === "Lower"){
-        if(newCard < previousCard){
+        if(playCard > currentCard){
             correctGuess = true;
         }
         else {
@@ -70,34 +69,13 @@ function guessCard(highLowGuess, newCard){
         console.log("No guess provided");
         correctGuess = false;
     }
-    
     return correctGuess;
 }
 
-// guess logic
-// function guessCard(highLowGuess, newCard){
-//     var correctGuess;
-    
-//     if(highLowGuess === "Higher"){        
-//         if(newCard > previousCard){
-//             correctGuess = true;
-//         }
-//         else {
-//             correctGuess = false;
-//         }
-//     }
-//     else if(highLowGuess === "Lower"){
-//         if(newCard < previousCard){
-//             correctGuess = true;
-//         }
-//         else {
-//             correctGuess = false;
-//         }
-//     }
-//     else {
-//         console.log("No guess provided");
-//         correctGuess = false;
-//     }
-    
-//     return correctGuess;
-// }
+function modifyCardGameHTML(correctGuess){
+    let resultString = "";   
+    if(correctGuess){
+        resultString = "You Win";
+    } else resultString = "You Lose";   
+}
+

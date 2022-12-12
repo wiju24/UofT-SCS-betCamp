@@ -105,8 +105,8 @@ nav {
 
 #hit,
 #stay,
-#bet {
-    width: 100px;
+#replay {
+    width: 120px;
     height: 50px;
     font-size: 20px;
     color: white;
@@ -122,14 +122,14 @@ nav {
 
 #hit:hover,
 #stay:hover,
-#bet:hover {
+#replay:hover {
     background: rgba(250, 238, 2, 0.6);
     box-shadow: 0 0 5px #024b24, 0 0 10px rgba(250, 238, 2, 0.5);
 }
 
 #hit:hover,
 #stay:hover,
-#bet:hover {
+#replay:hover {
     transform: translateY(2px);
 }
 
