@@ -1,7 +1,7 @@
-const app = require('express').Router();
-const User =  require('../models/User');
+const router = require('express').Router();
+const {User} =  require('../models/');
 
-app.post('/', async (req, res) => {
+router.post('/', async (req, res) => {
     try {
         const userInfo = await User.create(req.body);
         req.session.save(()=> {
@@ -18,7 +18,7 @@ app.post('/', async (req, res) => {
     }
 });
 
-app.post('/login',  async (req, res) => {
+router.post('/login',  async (req, res) => {
     try {
         const  userInfo = await User.findOne({ where: { email: req.body.email }});
         
@@ -57,4 +57,6 @@ router.post('/logout', (req, res) => {
     }
   });
 
-module.exports = app;
+
+
+module.exports = router;

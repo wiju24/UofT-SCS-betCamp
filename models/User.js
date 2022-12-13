@@ -1,7 +1,12 @@
-const { User, DataTypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const bcrypt = require('bcrypt');
 
-class User{}
+class User extends Model{
+    checkPassword(loginPw) {
+        return bcrypt.compareSync(loginPw, this.password);
+    }
+}
 
 User.init(
     {
@@ -32,10 +37,21 @@ User.init(
         },
         balance: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
+            defaultValue: 10
         },
     },
     {
+    hooks: {
+        beforeCreate: async (newUserData) => {
+            newUserData.password = await bcrypt.hash(newUserData.password, 10);
+            return newUserData;
+          },
+          beforeUpdate: async (updatedUserData) => {
+            updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+            return updatedUserData;
+          },
+        },
         sequelize,
         timestamps: false,
         freezeTableName: true,
@@ -43,4 +59,5 @@ User.init(
         modelName: 'betcamp',
     }
 );
+
 module.exports = User;
