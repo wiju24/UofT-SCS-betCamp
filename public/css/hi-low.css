@@ -79,7 +79,7 @@ nav {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-image: url("/Asset/bg.png");
+    background-image: url("/public/Asset/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -100,7 +100,7 @@ nav {
 
 .grid-container {
     margin:0;
-    padding:2px;
+    padding:5px;
     height: 80vh;
     max-width: 1500px;
     min-width: auto;
@@ -185,9 +185,9 @@ nav {
     color: #3A3A38;
 }
 
-#bet,
+#start,
 #playHiLo {
-    width: 100px;
+    width: 120px;
     height: 50px;
     font-size: 20px;
     color: white;
@@ -201,13 +201,13 @@ nav {
     margin: 10px;
 }
 
-#bet:hover,
+#start:hover,
 #playHiLo:hover {
     background: rgba(250, 238, 2, 0.6);
     box-shadow: 0 0 5px #024b24, 0 0 10px rgba(250, 238, 2, 0.5);
 }
 
-#bet:hover,
+#start:hover,
 #playHiLo:hover {
     transform: translateY(2px);
 }

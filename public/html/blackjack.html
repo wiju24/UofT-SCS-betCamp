@@ -1,70 +1,74 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Black Jack</title>
+    <link rel="stylesheet" href="blackjack.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="/public/css/blackjack.css">
 </head>
-<body>
-       
-   <nav></nav>
-   <div class="topnav">
-       <a href="#Game">Game</a>
-       <a href="#news">
-           <select id="select">
-               <option value="volvo">Casino</option>
-               <option value="Casino1">Casino 1</option>
-               <option value="Casino2">Casino 2</option>
-               <option value="Casino3">Casino 3</option>
-           </select>
-       </a>
-   </div>
-   <nav class="header">
-       <h3 id="headerText">UofT SCS betcamp</h3>
-       <button type="button" id="btn">Dark/Light Theme</button>
-   </nav>
 
-   <div class="w3-sidebar w3-light-grey w3-bar-block" id="sideNav">
-       <h3 class="w3-bar-item">Live game (Marquee)</h3>
+<body style="background-image:url(/public/Asset/background\ 1.png)">
 
-       <h3 style="margin-top: 30px;" class="w3-bar-item">My Bet</h3>
-       <a style="margin-top:40px;" href="#" class="w3-bar-item w3-button">Team:</a>
-       <a style="margin-top:20px;" href="#" class="w3-bar-item w3-button">Bet:</a>
+    <nav></nav>
+    <div class="topnav">
+        <a href="#Game">Game</a>
+        <a href="#news">
+            <select id="select">
+                <option value="volvo">Casino</option>
+                <option value="Casino1">Casino 1</option>
+                <option value="Casino2">Casino 2</option>
+                <option value="Casino3">Casino 3</option>
+            </select>
+        </a>
+    </div>
+    <nav class="header">
+        <h3 id="headerText">UofT SCS betcamp</h3>
+        <button type="button" id="btn">Dark/Light Theme</button>
+    </nav>
 
-   </div>
-   <div id="tiledBackground" style="height: 100vh;
+    <div class="w3-sidebar w3-light-grey w3-bar-block" id="sideNav">
+        <h3 class="w3-bar-item">Live game (Marquee)</h3>
+
+        <h3 style="margin-top: 30px;" class="w3-bar-item">My Bet</h3>
+        <a style="margin-top:40px;" href="#" class="w3-bar-item w3-button">Team:</a>
+        <a style="margin-top:20px;" href="#" class="w3-bar-item w3-button">Bet:</a>
+
+    </div>
+    <div id="tiledBackground" style="height: 100vh;
        font-family:arial;
        border-width: 120px;
        border-style: solid;
-       border-image: url(./Asset/border.png) 25% round;
+       border-image: url(/public/Asset/border.png) 25% round;
        margin-left: 18%;">
 
-       <div class="grid">
-           <div class="grid-container">
-               <div id="dealer-cards">
-                   <button id="bet" cli>Bet</button>
-                   <h2>Dealer: <span id="dealer-sum"></span></h2>
-                   <img id="hidden" src="./Asset/BACK.png">
-               </div>
+        <div class="grid">
+            <div class="grid-container">
+                <div id="dealer-cards">
+                    <button id="start">Start</button>
+                    <h2>Dealer: <span id="dealer-sum"></span></h2>
+                    <img id="hidden" src="/public/Asset/BACK.png">
+                </div>
 
-               <div id="your-cards">
-                   <h2>You: <span id="your-sum"></span></h2>
-               </div>
+                <div id="your-cards">
+                    <h2>You: <span id="your-sum"></span></h2>
+                </div>
 
-               <div>
-                   <button id="hit">Hit</button>
-                   <button id="stay">Stay</button>
-               </div>
-               <h1 id="results"></h1>
-           </div>
-
-
-       </div>
-
-
-
-   </div>
-   <script src="./public/js/blackjack.js"></script>
+                <div>
+                    <button id="hit">Hit</button>
+                    <button id="stay">Stay</button>
+                </div>
+                <h1 id="results"></h1>
+            </div>
+        </div>
+    </div>
+    <script src="/public/js/blackjack.js"></script>
 </body>
+
 </html>

@@ -1,4 +1,3 @@
-
 window.onload = function() {
     buildDeck();
     shuffleDeck();
@@ -30,36 +29,53 @@ function shuffleDeck() {
 }
 
 let currentCard = document.getElementById("card1");
-document.getElementById("bet").onclick = function() {
+document.getElementById("start").onclick = function() {
     let card1 = deck.pop();
     console.log(card1);
-    currentCard.src = "./Asset/cards/cards/" + card1 + ".png";
-    playCard.src = "Asset/BACK.png";
+    currentCard.src = "/public/Asset/cards/cards/" + card1 + ".png";
+    playCard.src = "/public/Asset/BACK.png";
 }
-
 
 
 let playCard = document.getElementById("card2");
 document.getElementById("playHiLo").onclick = function() {
     let card2 = deck.pop();
     console.log(card2);
-    playCard.src = "./Asset/cards/cards/" + card2 + ".png"
+    playCard.src = "/public/Asset/cards/cards/" + card2 + ".png"
+}
+
+function getValue(card) {
+    let data = card.split("-"); // "4-C" -> ["4", "C"]
+    let value = data[0];
+
+    if (isNaN(value)) { //A J Q K
+        if (value == "A") {
+            return 11;
+        }
+        else{
+            return 10;
+        }    
+    }
+    return parseInt(value);
+    console.log(value);
 }
 
 // guess logic
-function guessCard(highLowGuess, newCard){
+function guessCard(highLowGuess, card2){
     let correctGuess;
+    let Higher = document.getElementById("radioHi");
+    let Lower = document.getElementById("radioLo");
     
-    if(highLowGuess === "Higher"){        
-        if(newCard > previousCard){
+    if(highLowGuess === Higher){        
+        if(card2 > card1){
             correctGuess = true;
         }
         else {
             correctGuess = false;
         }
     }
-    else if(highLowGuess === "Lower"){
-        if(newCard < previousCard){
+    else if(highLowGuess === Lower){
+        if(card2 < card1){
             correctGuess = true;
         }
         else {
@@ -67,37 +83,22 @@ function guessCard(highLowGuess, newCard){
         }
     }
     else {
-        console.log("No guess provided");
+        console.log("Please select Higher or Lower!");
         correctGuess = false;
-    }
-    
+    }    
     return correctGuess;
 }
 
-// guess logic
-// function guessCard(highLowGuess, newCard){
-//     var correctGuess;
-    
-//     if(highLowGuess === "Higher"){        
-//         if(newCard > previousCard){
-//             correctGuess = true;
-//         }
-//         else {
-//             correctGuess = false;
-//         }
-//     }
-//     else if(highLowGuess === "Lower"){
-//         if(newCard < previousCard){
-//             correctGuess = true;
-//         }
-//         else {
-//             correctGuess = false;
-//         }
-//     }
-//     else {
-//         console.log("No guess provided");
-//         correctGuess = false;
-//     }
-    
-//     return correctGuess;
-// }
+function DisplayResult() {
+    if (correctGuess = true){
+        document.getElementById("result").innerHTML = "You Win!";
+    }
+
+    else if (correctGuess = false){
+        document.getElementById("result").innerHTML = "You Lose!";
+    }
+
+    else {
+        document.getElementById("result").innerHTML = "Please select 'Higher' or 'Lower'"
+    }
+}
