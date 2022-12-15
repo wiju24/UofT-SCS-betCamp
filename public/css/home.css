@@ -21,7 +21,7 @@ a:hover> .change{
       display: flex;
       color: aliceblue;
       text-decoration: none;
-      height: 4rem;
+      height: 6rem;
       width: 100%;
       text-align: center;
 }
@@ -31,3 +31,4 @@ body{
 hr{
     background-color: lightcyan;
 }
+

@@ -11,23 +11,25 @@ nav{
 body{
     background-color: #3A3A38;
 }
-.login-form{
-    position: absolute;
+.div1{
+    position: absolute center;
     background-color:rgba(255, 255, 255, 0.404);
     height: 18rem;
     width: 18rem;
-    margin-left: 10%;
+    margin-left: 34.2%;
     display: flexbox;
     position: absolute;
     margin-top: -30rem;
     text-align: center;
 }
-.signUp-form{
+.div2{
+    position: absolute center;
+    background-color:rgba(255, 255, 255, 0.684);
+    height: 18rem;
+    width: 18rem;
+    margin-left: 50.0%;
     display: flexbox;
-    margin-right: 10%;
+    position: absolute;
     margin-top: -30rem;
-    height: 3rem;
-    background-color: #3f634e;
     text-align: center;
-    color: #fff;
 }

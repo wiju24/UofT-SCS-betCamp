@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="/public/css/login.css">
     
    
 </head>
@@ -18,37 +18,43 @@
     <img src="https://media3.giphy.com/media/l1IXY77djUsHH6S8o/giphy.gif" style="width:50%;height: 42rem;">
     
     <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/87df9c72162251.5bee3ee5854dc.gif" style="width:50%;height: 42rem;margin-left: 0%;display: inline-flexbox;margin-top: 0rem;position: absolute;">
-    <div class="login-form">
-        <FORM style="text-align:center;padding-top: 6rem;">
-            <label >Email ID:</label>
+    <div class="div1">
+        <h2 style="color: #fff;">Login</h2>
+        <FORM style="text-align:center;padding-top: 2rem;">
+            <label for="email">Email:</label>
             <input type="email" id="email-log" >
             <br>
             <br>
-            <label >Password:</label>
+            <label for="password">Password:</label>
             <input type="password" id="password-log" >
             <br>
             <br>
             <button id="login">login!</button>
-            <button id="signUp"> SignUp!</button>
         </FORM>
     </div>
-    <div class="login-form">
+    <div class="div2">
+        <h2 style="color: #fff;">Sign Up!</h2>
         <form>
-            <label for="name">Name</label>;
-            <input type="text" id="name-sign" placeholder="Please Enter your name.">
-    
-            <label for="email">Email</label>;
-            <input type="email" id="email-sign" placeholder="Please Enter your email.">
-    
-            <label for="password">Password</label>;
-            <input type="password" id="password-sign" placeholder="Please Enter your password.">
-    
-            <label for="balance">Balance</label>;
-            <input type="balance" id="balance-sign" placeholder="Enter your starting balance.">
-    
-            <button id="submit"><a href="/home">Submit</a></button>
+            <label for="name">Name:</label>
+            <input type="text" id="name-sign" placeholder="Name">
+            <br>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email-sign" placeholder="Email">
+            <br>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password-sign" placeholder="Password">
+            <br>
+            <br>
+            <label for="balance">Balance:</label>
+            <input type="balance" id="balance-sign" placeholder="Starting Balance">
+            <br>
+            <br>
+            <button id="signUp">Sign Up!</button>
         </form>
-    </div>
+        </FORM>
+    </div>>
 <script src="./js/index.js"></script>
 </body>
 </html>

@@ -1,12 +1,11 @@
-  var Name = document.getElementById('name');
-    const Name = async (params) => {
-        const name1 = document.getElementById('name').value.trim();
-        const response = await fetch('/api/users/', {
-            method: 'GET',
-            body: JSON.stringify({ Name }),
-            headers: { 'Content-Type': 'application/json'},
-        });
-    };
+const Name = async (params) => {
+    const name1 = document.getElementById('name').value.trim();
+    const response = await fetch('/api/users/', {
+        method: 'GET',
+        body: JSON.stringify({ name }),
+        headers: { 'Content-Type': 'application/json'},
+    });
+};
 
 
 let addBalanceButton = document.getElementById('addBalanceButton');

@@ -5,7 +5,7 @@ const apiRoutes = require('./apiRoutes');
 
 // require api routes
 
-router.use('/', routes);  //     /
+router.use('/', routes);
 router.use('/users',  userRoutes);
 router.use('/api', apiRoutes)
 
