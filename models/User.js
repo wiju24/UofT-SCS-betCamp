@@ -32,13 +32,13 @@ User.init(
             type: DataTypes.STRING,
             allowNull:  false,
             validate: {
-                len: [20],
+                len: [8],
             },
         },
         balance: {
             type: DataTypes.INTEGER,
             allowNull: true,
-            defaultValue: 10
+            defaultValue: 0
         },
     },
     {

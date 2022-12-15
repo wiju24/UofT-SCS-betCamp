@@ -33,8 +33,8 @@ let currentCard = document.getElementById("card1");
 document.getElementById("bet").onclick = function() {
     let card1 = deck.pop();
     console.log(card1);
-    currentCard.src = "./Asset/cards/cards/" + card1 + ".png";
-    playCard.src = "Asset/BACK.png";
+    currentCard.src = "\Asset\cards\cards" + card1 + ".png";
+    playCard.src = "\Asset\BACK.png";
 }
 
 

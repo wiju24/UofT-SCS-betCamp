@@ -5,31 +5,25 @@ const withAuth = require('../utils/authent');
 
 
 router.get('/users', async (req,res) => {
-    // let data = await User.findAll({}); 
-    // res.json(data)
-    let data = {user:'bob'}
+    let data = await User.findAll({}); 
     res.json(data)
-
 }) 
 
  /// /api/addBalance
 router.get('/addBalance', async (req,res) => {
     let balance = req.body.balance;
-    // let data = await User.findAll({}); 
-    // res.json(data)
-    let data = {user:'bob'}
+    let data = await User.findAll({}); 
     res.json(data)
-
 }) 
 
-router.post('/', async (req, res) => {
+// router.post('/', async (req, res) => {
 
-        res.send(req.body.name)
-})
+//         res.send(req.body.name)
+// })
 
-router.put('/', async (req, res) => {
+// router.put('/', async (req, res) => {
 
-})
+// })
 
 router.delete('/:id', async (req, res) => {
     try {
@@ -51,21 +45,12 @@ router.delete('/:id', async (req, res) => {
     }
   });
 
-router.get('/', async (req, res) => {
+// router.get('/', async (req, res) => {
 
-})
+// })
 
 
 module.exports=router
 
 
-//HTML, CSS, JS (90% done -- just need to touch up)
-
-//Mysql (Verify Creating and adding to database) -- what do we have is accurate and what we think its doing? Ask what more needs to be added? 
-
-//API for live odd -- what needs fetched from the api? How to display after logging in?
-
-//How can we link to account balance?
-
-//
 
